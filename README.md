@@ -53,6 +53,14 @@ Puedes insertar información de tu personaje en cualquier parte del macro:
 | `(name)`  | Solo el nombre (sin apellido) |
 | `(zone)`  | Nombre de ciudad y zona actual |
 ---
+### Variables de tu vehículo
+Puedes insertar información del vehículo en que estes en cualquier parte del macro:
+| Código    | Inserta                       |
+| --------- | ----------------------------- |
+| `(vid)`   | ID del vehículo               |
+| `(vname)` | Modelo del vehículo           |
+| `(vplate)`| Placa actual del vehículo     |
+---
 ### Jugador más cercano
 Se reemplaza automáticamente con la información del jugador más cercano a ti:
 | Código     | Inserta                       |
