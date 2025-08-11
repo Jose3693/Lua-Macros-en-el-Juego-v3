@@ -1,95 +1,97 @@
+# 🚀Lua Macros for SAMP
+This script allows you to create and execute custom macros within the GTA San Andreas (SAMP) game using MoonLoader.
+Macros are executed in sequence and can include automated actions, predefined text, and waiting times.<br>
+![](https://i.imgur.com/qzmsrcp.png)<br>
+## ✨ Main Features<br>
+**🔹 1. Macro Profiles**
+- Create and save different sets of macros.<br>
+- Switch between profiles without deleting them.<br>
+- Ideal for players who play on multiple servers with different commands.
 
-# 🚀 Lua Macros for SAMP  
-This script allows you to create and run custom macros within the GTA San Andreas (SAMP) game using MoonLoader.  
-Macros run sequentially and can include automatic actions, predefined texts, and wait times.<br>  
-![](https://i.imgur.com/qzmsrcp.png)<br>  
+**🔹 2. Dynamic Variables**<br>
+These variables can be used in your macros to insert automatic and personalized information, making it easier to create dynamic commands and messages.
 
-## ✨ Main Features<br>  
-**🔹 1. Macro Profiles**  
-- Create and save different sets of macros.<br>  
-- Switch between profiles without needing to delete them.<br>  
-- Ideal for players who play on multiple servers with different commands.  
+**🔹 3. Multi-language Support**
+- Automatically detects the Windows language and applies it to the mod.
+- Available in Spanish and English.
+- Defaults to English if none is detected.
 
-**🔹 2. Dynamic Variables**<br>  
-These variables can be used in your macros to insert automatic and personalized information, making it easier to create dynamic commands and messages.  
+## 📜 Macro Syntax
+You can combine the following functions within a macro to automate actions in the game.
 
-**🔹 3. Multi-language Support**  
-- Automatically detects the Windows language and sets it to the mod.
-- Available in Spanish and English.  
-- Defaults to English if none is detected.  
+### (chat) text
+Opens the chat and enters the specified text without sending it.
 
-## 📜 Macro Syntax  
-You can combine the following functions within a macro to automate actions in the game.  
-
-### (chat) text  
-Opens the chat and inputs the specified text without sending it.  
-
-Example:  
+Example:
 ```
-(chat) /arrest  
-(1000)  
-you are under arrest....  
+(chat) /arrestar
+(1000)
+you are under arrest...
 ```
-💡 This will open the chat and write /arrest, ready for you to send it manually. The next macro line will continue once you close the chat or send /arrest.  
+💡 This will open the chat and type /arrestar, ready for you to send manually. The next macro line will continue once you close the chat or send the /arrestar command.
 
----  
-### (time)  
-Sets a wait time before continuing to the next macro command.  
-Time is expressed in milliseconds.  
+---
+### (time)
+Sets a waiting time before continuing to the next macro command.
+The time is expressed in milliseconds.
 
-Example:  
+Example:
 ```
-(1000)  
-hello  
-(1000)  
-hello 2  
+(1000)
+hello
+(1000)
+hello 2
+💡 Waits 1 second before executing the next macro.
 ```
-💡 Waits 1 second before executing the next macro command.  
-
----  
-### Your Character Variables  
-You can insert your character’s information anywhere in the macro:  
-| Code     | Inserts                     |  
-| -------- | --------------------------- |  
-| `(id)`   | Your character’s ID         |  
-| `(fname)`| Full name                  |  
-| `(name)` | Only the first name (no last name) |  
-
----  
-### Nearest Player  
-Automatically replaced with the information of the player closest to you:  
-| Code       | Inserts                     |  
-| ---------- | --------------------------- |  
-| `(cid)`    | Player ID                   |  
-| `(cfname)` | Full name                   |  
-| `(cname)`  | Only the first name (no last name) |  
-
----  
-### Player You Are Aiming At  
-Inserts information about the player you are aiming at:  
-| Code       | Inserts                     |  
-| ---------- | --------------------------- |  
-| `(tid)`    | Player ID                   |  
-| `(tfname)` | Full name                   |  
-| `(tname)`  | Only the first name (no last name) |  
-
----  
-### 📌 Full Macro Example  
+---
+### Your Character Variables
+You can insert your character's information anywhere in the macro:
+| Code      | Inserts                        |
+| --------- | ------------------------------ |
+| `(id)`    | Your character's ID            |
+| `(fname)` | Full name                      |
+| `(name)`  | First name only (no surname)   |
+| `(zone)`  | Current city and zone name     |
+---
+### Your Vehicle Variables
+You can insert your vehicle's information anywhere in the macro:
+| Code      | Inserts                        |
+| --------- | ------------------------------ |
+| `(vid)`   | Vehicle ID                     |
+| `(vname)` | Vehicle model                  |
+| `(vplate)`| Vehicle's current plate        |
+---
+### Nearest Player
+Automatically replaced with the information of the player closest to you:
+| Code      | Inserts                        |
+| --------- | ------------------------------ |
+| `(cid)`   | Player ID                      |
+| `(cfname)`| Full name                      |
+| `(cname)` | First name only (no surname)   |
+---
+### Player You Are Aiming At
+Inserts the information of the player you are currently aiming at:
+| Code      | Inserts                        |
+| --------- | ------------------------------ |
+| `(tid)`   | Player ID                      |
+| `(tfname)`| Full name                      |
+| `(tname)` | First name only (no surname)   |
+---
+### 📌 Complete Macro Example
 ```
-(chat) /me looks suspiciously at (cfname)  
-(1000)  
-(chat) Do you have something to hide, (cfname)?  
+(chat) /me looks at (cfname) suspiciously
+(1000)
+(chat) Do you have something to hide, (cfname)?
 ```
-💡 This macro:  
+💡 This macro:
 ```
-Writes in chat: /me looks suspiciously at [nearest player’s name].  
-Waits 1 second.  
-Writes in chat: Do you have something to hide, [nearest player’s name]?  
-```  
-
----  
-## ⚙️ Notes  
-- Nearest player variables will not send the command if no player is detected nearby when pressing the key. The same applies to the aiming player variables.  
-- You can mix normal text with dynamic variables in the same command.  
-- Wait times (time) allow you to synchronize your macros to run smoothly.  
-- The (chat) pattern always requires you to close or send the chat command to continue with the next macro.  
+Types in chat: /me looks at [nearest player's name] suspiciously.
+Waits 1 second.
+Types in chat: Do you have something to hide, [nearest player's name]?
+```
+---
+## ⚙️ Notes
+- Nearest player variables will not send the command if no player is detected nearby when pressing the key. The same applies for aiming and vehicle variables.
+- You can mix normal text with dynamic variables in the same command.
+- Waiting times (time) allow you to synchronize your macros for smooth execution.
+- The (chat) pattern always requires you to close or send the chat command before continuing to the next macro.
