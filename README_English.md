@@ -14,7 +14,7 @@ Macros run sequentially and can include automatic actions, predefined texts, and
 These variables can be used in your macros to insert automatic and personalized information, making it easier to create dynamic commands and messages.  
 
 **🔹 3. Multi-language Support**  
-- Automatically detects Windows language.  
+- Automatically detects the Windows language and sets it to the mod.
 - Available in Spanish and English.  
 - Defaults to English if none is detected.  
 
