@@ -91,7 +91,7 @@ Escribe en el chat: ¿Tienes algo que ocultar, [nombre jugador más cercano]?.
 ```
 ---
 ## ⚙️ Notas
-- Las variables del jugador más cercano no enviarán el comando si no se detecta ningún jugador cercano al presionar la tecla. Lo mismo aplica para las variables al apuntar.
+- Las variables del jugador más cercano no enviarán el comando si no se detecta ningún jugador cercano al presionar la tecla. Lo mismo aplica para las variables al apuntar y vehículo.
 - Puedes mezclar texto normal con variables dinámicas en un mismo comando.
 - Los tiempos de espera (tiempo) permiten sincronizar tus macros para que se ejecuten con fluidez.
 - El patron (chat) siempre requiere que cierres o envies el comando del chat para continuar con el siguiente macro.
