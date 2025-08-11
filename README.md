@@ -12,7 +12,7 @@ Los macros se ejecutan en secuencia y pueden incluir acciones automáticas, text
 Estas variables pueden ser usadas en tus macros para insertar información automática y personalizada, facilitando la creación de comandos y mensajes dinámicos.
 
 **🔹 3. Soporte multi-idioma**
-- Detecta automáticamente el idioma de Windows.
+- Detecta automáticamente el idioma de Windows y lo establece al mod.
 - Disponible en Español e Inglés.
 - Si no detecta ninguno, usa inglés por defecto.
 
