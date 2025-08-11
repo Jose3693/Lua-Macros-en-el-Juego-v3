@@ -36,6 +36,9 @@ El tiempo se expresa en milisegundos.
 Ejemplo:
 ```
 (1000)
+hola
+(1000)
+hola 2
 💡 Espera 1 segundo antes de ejecutar el siguiente macro.
 ```
 ---
