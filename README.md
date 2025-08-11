@@ -21,7 +21,7 @@ Puedes combinar las siguientes funciones dentro de un macro para automatizar acc
 
 ### (chat) texto
 Abre el chat e ingresa el texto especificado sin enviarlo.
-El macro continuará una vez que cierres el chat.
+El macro continuará una vez que cierres el chat o lo envies.
 
 Ejemplo:
 ```
