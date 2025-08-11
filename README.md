@@ -51,6 +51,7 @@ Puedes insertar información de tu personaje en cualquier parte del macro:
 | `(id)`    | ID de tu personaje            |
 | `(fname)` | Nombre completo               |
 | `(name)`  | Solo el nombre (sin apellido) |
+| `(zone)`  | Nombre de ciudad y zona actual |
 ---
 ### Jugador más cercano
 Se reemplaza automáticamente con la información del jugador más cercano a ti:
