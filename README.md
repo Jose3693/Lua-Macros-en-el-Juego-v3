@@ -21,13 +21,15 @@ Puedes combinar las siguientes funciones dentro de un macro para automatizar acc
 
 ### (chat) texto
 Abre el chat e ingresa el texto especificado sin enviarlo.
-El macro continuará una vez que cierres el chat o lo envies.
 
 Ejemplo:
 ```
 (chat) /arrestar
-💡 Esto abrirá el chat y escribirá /arrestar, quedando listo para que lo envíes manualmente.
-``` 
+(1000)
+usted queda detenido....
+```
+💡 Esto abrirá el chat y escribirá /arrestar, quedando listo para que lo envíes manualmente. Y la siguiente línea de macro continuará una vez que cierres el chat o envies el /arrestar.
+
 ---
 ### (tiempo)
 Establece un tiempo de espera antes de continuar con el siguiente comando del macro.
